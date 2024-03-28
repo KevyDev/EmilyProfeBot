@@ -2,7 +2,7 @@ import os
 import requests
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ReplyKeyboardMarkup, constants
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ConversationHandler, MessageHandler, filters
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 async def start(update, context):
     await update.message.reply_text(
@@ -42,7 +42,7 @@ async def review(update, context):
         )
 
 def main():
-    load_dotenv()
+    # load_dotenv()
     app = ApplicationBuilder().token(os.environ.get("BOT_TOKEN")).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT, review))
