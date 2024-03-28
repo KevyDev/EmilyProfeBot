@@ -20,7 +20,7 @@ async def review(update, context):
         i = 1
         indications = "No se encontró ningún error. ¡Muy bien! 😋"
         if len(matches) > 0:
-            indications = f'¡Se ha encontrado un posible error!\n\n' if len(matches) == 1 else f'¡Se han encontrado {len(matches)} posibles errores!\n\n'
+            indications = f'¡Se ha encontrado un posible error! 😡\n\n' if len(matches) == 1 else f'¡Se han encontrado {len(matches)} posibles errores! 😡😡😡\n\n'
             for match in matches:
                 if i > 1:
                     indications += "\n\n---------------------------------------------\n\n"
